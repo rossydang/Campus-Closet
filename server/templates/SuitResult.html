@@ -1,0 +1,11 @@
+<html>
+<h1>Suit Result </h1>
+<h3>Size: {{size}} </h3>
+<h3> Gender: {{gender}} </h3>
+<p>Rent out suit by entering your number below</p>
+<form action="{{ url_for('rent_suit') }}" method="post">
+    <input type="hidden"  name="suit_id" value="{{suit_id}}">
+    <input type="text"  name="telephone_number" value="">
+    <input type="submit" name="rent_suit" value="Rent">
+</form>
+</html>
