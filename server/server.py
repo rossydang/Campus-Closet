@@ -54,7 +54,7 @@ def qr_form():
     gender = request.form['gender']
     suit_id = str(uuid.uuid4())
     isAvail = True
-    suit_type = request.form['suit_type']
+    #suit_type = request.form['suit_type']
     hostname = urlparse(request.base_url).hostname
     qr_url = hostname + ":5000" + "/qr_code/" + suit_id + ".png"
     qr_name = suit_id + ".png"
