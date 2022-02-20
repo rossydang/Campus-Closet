@@ -119,11 +119,8 @@ def rent_suit():
 
 
 def send_reminder(telephone_number):
-    #TODO get this working
-    #account_sid = os.environ['TWILIO_ACCOUNT_SID']
-    account_sid = ""
-    #auth_token = os.environ['TWILIO_AUTH_TOKEN']
-    auth_token = ""
+    account_sid = os.environ['TWILIO_ACCOUNT_SID']
+    auth_token = os.environ['TWILIO_AUTH_TOKEN']
     telephone_number = ""
     client = Client(account_sid, auth_token)
     message = client.messages.create(body="Thank you for renting out a suit from the Campus Closet. Please return the suit within 2 weeks.", from_=TWILO_NUMBER, to=telephone_number)
